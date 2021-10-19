@@ -1,15 +1,15 @@
-import { useContext } from 'react';
-import { ChallengesContext } from '../contexts/ChallengesContext';
+import { useChallenges } from '../hooks/useChallenges';
+
 import styles from '../styles/components/Profile.module.css';
 
 export function Profile() {
-  const { level } = useContext(ChallengesContext);
+  const { level } = useChallenges();
 
   return (
     <div className={styles.profileContainer}>
       <img src="https://github.com/jhonatanoliveira1.png" alt="Jhonatan de Oliveira"/>
       <div>
-        <strong>Jhonatan de Oliveira</strong>
+        <strong>Diego Fernandes</strong>
         <p>
           <img src="icons/level.svg" alt="Level" />
           Level {level}
